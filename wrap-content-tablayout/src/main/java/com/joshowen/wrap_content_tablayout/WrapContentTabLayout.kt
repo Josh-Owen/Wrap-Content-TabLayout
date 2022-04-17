@@ -34,7 +34,7 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
             this.wrapAllTabs()
         } else {
             wrappedTabsIndexes?.let {
-                this.wrappedSelectedItems(it)
+                this.wrapSelectedTabs(it)
             }
         }
     }
@@ -48,15 +48,15 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
 
         @JvmStatic
         @BindingAdapter("wrapSelectedTabs")
-        fun TabLayout.wrappedSelectedItems(wrappedTabsIndexes: Array<Int>) {
-            for (index in wrappedTabsIndexes) {
+        fun TabLayout.wrapSelectedTabs(wrappedTabIndexes: Array<Int>) {
+            for (index in wrappedTabIndexes) {
                 val view = (this.getChildAt(0) as LinearLayout).getChildAt(index)
                 val layoutParams = view.layoutParams as LinearLayout.LayoutParams
                 layoutParams.weight = 0.0f
                 layoutParams.width = LinearLayout.LayoutParams.WRAP_CONTENT
                 view.layoutParams = layoutParams
             }
-            this@Companion.wrappedTabsIndexes = wrappedTabsIndexes
+            this@Companion.wrappedTabsIndexes = wrappedTabIndexes
         }
 
         @JvmStatic
