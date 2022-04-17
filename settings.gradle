@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "WrapContentTabLayout"
-include ':app'
+include ':samples'
 include ':wrap-content-tablayout'

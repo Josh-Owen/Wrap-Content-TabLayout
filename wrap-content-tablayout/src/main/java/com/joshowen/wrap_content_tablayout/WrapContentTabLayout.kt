@@ -11,6 +11,7 @@ import com.google.android.material.tabs.TabLayout
 
 class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(context, attrs) {
 
+    //region Constructor
     init {
 
         val attributes = context.obtainStyledAttributes(attrs, R.styleable.WrapContentTabLayout)
@@ -27,6 +28,8 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
 
     }
 
+    //endregion
+
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
@@ -39,12 +42,15 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
         }
     }
 
+    //region Companion-Object
     companion object {
 
+        //region Variables
         const val WRAPPED_INDEXES_REFERENCE_NOT_FOUND = -1
 
         private var shouldWrapAllTabs: Boolean = false
         private var wrappedTabsIndexes: Array<Int>? = null
+        //endregion
 
         @JvmStatic
         @BindingAdapter("wrapSelectedTabs")
@@ -65,11 +71,12 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
             if (shouldWrapAllTabs) {
                 for (item in this.allViews) {
                     item.updateLayoutParams {
-                        width = ViewGroup.LayoutParams.WRAP_CONTENT
+                        width = LinearLayout.LayoutParams.WRAP_CONTENT
                     }
                 }
             }
             this@Companion.shouldWrapAllTabs = shouldWrapAllTabs
         }
     }
+    //endregion
 }
