@@ -15,13 +15,13 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
 
         val attributes = context.obtainStyledAttributes(attrs, R.styleable.WrapContentTabLayout)
 
-        val wrappedIds = attributes.getResourceId(R.styleable.WrapContentTabLayout_wrapSelectedTabs, -1)
+        val wrappedTabIndexesReference = attributes.getResourceId(R.styleable.WrapContentTabLayout_wrapSelectedTabs, WRAPPED_INDEXES_REFERENCE_NOT_FOUND)
 
-        if (wrappedIds != -1) {
-            wrappedTabsIndexes = resources.getIntArray(wrappedIds).toTypedArray()
+        if (wrappedTabIndexesReference != WRAPPED_INDEXES_REFERENCE_NOT_FOUND) {
+            wrappedTabsIndexes = resources.getIntArray(wrappedTabIndexesReference).toTypedArray()
         }
 
-        shouldWrapViews = attributes.getBoolean(R.styleable.WrapContentTabLayout_wrapAllTabs, false)
+        shouldWrapAllTabs = attributes.getBoolean(R.styleable.WrapContentTabLayout_wrapAllTabs, false)
 
         attributes.recycle()
 
@@ -30,8 +30,8 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
-        if (shouldWrapViews) {
-            this.wrapAllItems(true)
+        if (shouldWrapAllTabs) {
+            this.wrapAllTabs()
         } else {
             wrappedTabsIndexes?.let {
                 this.wrappedSelectedItems(it)
@@ -41,7 +41,9 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
 
     companion object {
 
-        private var shouldWrapViews: Boolean = false
+        const val WRAPPED_INDEXES_REFERENCE_NOT_FOUND = -1
+
+        private var shouldWrapAllTabs: Boolean = false
         private var wrappedTabsIndexes: Array<Int>? = null
 
         @JvmStatic
@@ -59,15 +61,15 @@ class WrapContentTabLayout(context: Context, attrs: AttributeSet?) : TabLayout(c
 
         @JvmStatic
         @BindingAdapter("wrapAllTabs")
-        fun TabLayout.wrapAllItems(shouldWrapViews: Boolean) {
-            if (shouldWrapViews) {
+        fun TabLayout.wrapAllTabs(shouldWrapAllTabs: Boolean = true) {
+            if (shouldWrapAllTabs) {
                 for (item in this.allViews) {
                     item.updateLayoutParams {
                         width = ViewGroup.LayoutParams.WRAP_CONTENT
                     }
                 }
             }
-            this@Companion.shouldWrapViews = shouldWrapViews
+            this@Companion.shouldWrapAllTabs = shouldWrapAllTabs
         }
     }
 }
