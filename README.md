@@ -10,7 +10,7 @@ in Native Android allowing for the creation of similar layouts present in popula
 
 ## Getting started
 
-### Setting up the dependency
+### Download
 
 For detailed instructions please check out the official [Jitpack documentation](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout/Tag).
 
@@ -69,7 +69,7 @@ This widget attribute accepts an array of integers which can either be located i
 
 Or alternatively use the following referencing your array in your view model:
 
-```app:wrapSelectedTabs="@{vm.wrappedTabs}```
+```app:wrapSelectedTabs="@{viewModel.wrappedTabs}"```
 
 #### wrapAllTabs 
 
@@ -81,7 +81,7 @@ This widget attribute accepts a boolean which can either be declared in the widg
  
 Or alternatively use the following referencing a boolean in your view model:
 
- ```app:wrapAllTabs="@{vm.shouldTabsBeWrapped}```
+ ```app:wrapAllTabs="@{viewModel.shouldTabsBeWrapped}```
 
 
 
