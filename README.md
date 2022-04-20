@@ -3,9 +3,8 @@
 [![](https://jitpack.io/v/Josh-Owen/Wrap-Content-TabLayout.svg)](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout)
 
 WrapContentTabLayout is a short and simple library used to solve the novel problem
-of wrapping individual tab items or entire TabLayouts in Native Android allowing for the creation of
-similar [TabLayout's](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) 
-present in applications such as WhatsApp e.g.
+of wrapping individual tab items or entire [TabLayout's](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout)
+in Native Android allowing for the creation of similar layouts present in popular applications such as WhatsApp e.g.
 
 ![](images/tablayout_image.jpg)
 
