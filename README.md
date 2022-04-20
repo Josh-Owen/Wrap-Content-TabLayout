@@ -61,10 +61,11 @@ This widget attribute takes an array of integers which can either be located fro
 
 ##### ArraysXML (Resource File)
 
-``
+```
 <integer-array name="wrappedTabs">
         <item>0</item>
-</integer-array>``
+</integer-array>
+```
 
 Or alternatively use the following referencing your array in your view model:
 
@@ -84,7 +85,10 @@ Or alternatively use the following referencing a boolean in your view model:
 
 Note: There are code samples demonstrated both included within the project. 
 
-### Working Code Template (Just implement your array and your image drawable)
+
+
+
+### Working Code Template (Simply implement your array and your image drawable)
 
 ```<com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
@@ -119,7 +123,3 @@ Note: There are code samples demonstrated both included within the project.
             
     </com.joshowen.wrap_content_tablayout.WrapContentTabLayout>
 </com.google.android.material.appbar.AppBarLayout>```
-
-
-
- 
