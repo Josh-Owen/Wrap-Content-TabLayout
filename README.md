@@ -57,7 +57,7 @@ This widget attribute takes an array of integers which can either be located fro
 
 ##### XML Layout: 
 
-    ```app:wrapSelectedTabs="@array/wrappedTabs"```
+``app:wrapSelectedTabs="@array/wrappedTabs"``
 
 ##### ArraysXML (Resource File)
 
