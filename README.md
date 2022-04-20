@@ -1,2 +1,126 @@
-# Wrap-Content-TabLayout
+# Wrap-Content TabLayout
+=====
+
+[![](https://jitpack.io/v/Josh-Owen/Wrap-Content-TabLayout.svg)](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout)
+
+Wrap-Content-TabLayout is a short and simple library used to solve the novel problem
+of wrapping either individual tab items or entire TabLayouts in Native Android to replicate
+similar designs to tab layouts seen within applications such as WhatsApp. 
+
+![](images/tablayout_image.jpg)
+
+## Getting started
+
+### Setting up the dependency
+
+For detailed instructions please check out the official [Jitpack documentation](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout/Tag) 
+
+You can download the project from the Github's [release page](https://github.com/Josh-Owen/Wrap-Content-TabLayout/releases)
+
+Or use Gradle:
+
+```gradle
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    implementation 'com.github.Josh-Owen:Wrap-Content-TabLayout:1.0.0'
+}
+```
+
+Or Maven:
+
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.Josh-Owen</groupId>
+    <artifactId>Wrap-Content-TabLayout</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
+```
+### Library properties
+
+WrapContentTabLayout contains all of the functionality available in the native[tab layout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) widget
+as well as the addition of two additional properties:
+
+#### wrapSelectedTabs 
+
+This widget attribute takes an array of integers which can either be located from a projects resource file or via data-binding. 
+
+##### XML Layout: 
+
+ ```app:wrapSelectedTabs="@array/wrappedTabs"```
+
+##### Arrays.XML (Resource File)
+
+```<integer-array name="wrappedTabs">
+        <item>0</item>
+</integer-array>```
+
+Or alternatively use the following referencing your array in your view model:
+
+```app:wrapSelectedTabs="@{vm.wrappedTabs}```
+
+#### wrapAllTabs 
+
+This widget attribute takes an boolean which can either be declared in the widgets layout or via data-binding. 
+
+##### XML Layout: 
+
+ ```app:wrapAllTabs="true```
+ 
+Or alternatively use the following referencing a boolean in your view model:
+
+ ```app:wrapAllTabs="@{vm.shouldTabsBeWrapped}```
+
+Note: There are code samples demonstrated both included within the project. 
+
+### Working Code Template (Just implement your array and your image drawable)
+
+```<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.joshowen.wrap_content_tablayout.WrapContentTabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:wrapSelectedTabs="@array/homeWrappedTabLayoutItems">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_camera"/>
+            
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tab 1"/>
+            
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tab 2/>
+            
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tab 3"/>
+            
+    </com.joshowen.wrap_content_tablayout.WrapContentTabLayout>
+</com.google.android.material.appbar.AppBarLayout>```
+
+
+
  
