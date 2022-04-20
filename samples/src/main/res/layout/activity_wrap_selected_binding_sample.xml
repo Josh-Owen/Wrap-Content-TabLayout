@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.joshowen.wrapcontenttablayout.ActivityWrapSelectedVM" />
+    </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,7 +31,7 @@
                 app:tabIconTint="@color/white"
                 app:tabSelectedTextColor="@color/white"
                 app:tabTextColor="@color/white"
-                app:wrapSelectedTabs="@array/wrappedTabs">
+                app:wrapSelectedTabs="@{viewmodel.wrappedTabs}">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
@@ -47,16 +57,16 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="WrapSelected Demo"
+            android:text="@string/demo_wrap_selected"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
 
         <Button
             android:id="@+id/btnNext"
