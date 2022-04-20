@@ -1,11 +1,10 @@
-# Wrap-Content TabLayout
-=====
+# WrapContentTabLayout
 
 [![](https://jitpack.io/v/Josh-Owen/Wrap-Content-TabLayout.svg)](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout)
 
-Wrap-Content-TabLayout is a short and simple library used to solve the novel problem
-of wrapping either individual tab items or entire TabLayouts in Native Android to replicate
-similar designs to tab layouts seen within applications such as WhatsApp. 
+WrapContentTabLayout i  s a short and simple library used to solve the novel problem
+of wrapping individual tab items or entire TabLayouts in Native Android to replicate
+similar designs to tab layouts seen within applications such as WhatsApp e.g.
 
 ![](images/tablayout_image.jpg)
 
@@ -13,9 +12,9 @@ similar designs to tab layouts seen within applications such as WhatsApp.
 
 ### Setting up the dependency
 
-For detailed instructions please check out the official [Jitpack documentation](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout/Tag) 
+For detailed instructions please check out the official [Jitpack documentation](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout/Tag).
 
-You can download the project from the Github's [release page](https://github.com/Josh-Owen/Wrap-Content-TabLayout/releases)
+Additionally you can download the project from the Github's [release's page](https://github.com/Josh-Owen/Wrap-Content-TabLayout/releases)
 
 Or use Gradle:
 
@@ -46,26 +45,26 @@ Or Maven:
     <artifactId>Wrap-Content-TabLayout</artifactId>
     <version>1.0.0</version>
 </dependency>
-
 ```
 ### Library properties
 
-WrapContentTabLayout contains all of the functionality available in the native[tab layout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) widget
-as well as the addition of two additional properties:
+WrapContentTabLayout contains all of the functionality available in the native [TabLayout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) widget
+with the addition of two additional properties:
 
 #### wrapSelectedTabs 
 
-This widget attribute takes an array of integers which can either be located from a projects resource file or via data-binding. 
+This widget attribute takes an array of integers which can either be located from a projects resource file or via data binding. 
 
 ##### XML Layout: 
 
- ```app:wrapSelectedTabs="@array/wrappedTabs"```
+    ```app:wrapSelectedTabs="@array/wrappedTabs"```
 
-##### Arrays.XML (Resource File)
+##### ArraysXML (Resource File)
 
-```<integer-array name="wrappedTabs">
+``
+<integer-array name="wrappedTabs">
         <item>0</item>
-</integer-array>```
+</integer-array>``
 
 Or alternatively use the following referencing your array in your view model:
 
