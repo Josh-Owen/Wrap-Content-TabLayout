@@ -59,7 +59,7 @@ This widget attribute takes an array of integers which can either be located fro
 
 ``app:wrapSelectedTabs="@array/wrappedTabs"``
 
-##### ArraysXML (Resource File)
+##### Arrays.XML (Resource File)
 
 ```
 <integer-array name="wrappedTabs">
@@ -73,7 +73,7 @@ Or alternatively use the following referencing your array in your view model:
 
 #### wrapAllTabs 
 
-This widget attribute takes an boolean which can either be declared in the widgets layout or via data-binding. 
+This widget attribute takes an boolean which can either be declared in the widgets layout or via data binding. 
 
 ##### XML Layout: 
 
@@ -88,9 +88,10 @@ Note: There are code samples demonstrated both included within the project.
 
 
 
-### Working Code Template (Simply implement your array and your image drawable)
+### Working Code Template (Simply implement your array and replace with your image drawable)
 
-```<com.google.android.material.appbar.AppBarLayout
+```
+    <com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
@@ -122,4 +123,5 @@ Note: There are code samples demonstrated both included within the project.
             android:text="Tab 3"/>
             
     </com.joshowen.wrap_content_tablayout.WrapContentTabLayout>
-</com.google.android.material.appbar.AppBarLayout>```
+</com.google.android.material.appbar.AppBarLayout>
+```
