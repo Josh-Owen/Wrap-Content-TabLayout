@@ -49,11 +49,11 @@ Or Maven:
 ### Library Overview
 
 WrapContentTabLayout contains all of the functionality available in the native [TabLayout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) widget
-with the addition of two additional properties:
+with the addition of two additional attributes:
 
 #### wrapSelectedTabs 
 
-This widget attribute takes an array of integers which can either be located from a projects resource file or via data binding. 
+This widget attribute accepts an array of integers which can either be located in a projects resource file or via data binding. 
 
 ##### XML Layout: 
 
@@ -73,7 +73,7 @@ Or alternatively use the following referencing your array in your view model:
 
 #### wrapAllTabs 
 
-This widget attribute takes an boolean which can either be declared in the widgets layout or via data binding. 
+This widget attribute accepts a boolean which can either be declared in the widgets layout or via data binding. 
 
 ##### XML Layout: 
 
@@ -85,7 +85,7 @@ Or alternatively use the following referencing a boolean in your view model:
 
 
 
-Note: There are code samples demonstrated both included within the project. 
+Note: There are code samples demonstrating both attributes included within the project. 
 
 
 ### Working Code Template (Simply implement your array and replace with your image drawable)
