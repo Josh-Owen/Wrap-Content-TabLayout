@@ -27,7 +27,7 @@ class ActivityWrapAll : AppCompatActivity() {
 
     //region Toolbar
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == android.R.id.home) {
+        if (item.itemId == android.R.id.home) {
             onBackPressed()
         }
         return super.onOptionsItemSelected(item)
@@ -36,7 +36,7 @@ class ActivityWrapAll : AppCompatActivity() {
 
     //region Companion Object
     companion object {
-        fun newInstance(context : Context) : Intent  {
+        fun newInstance(context: Context): Intent {
             return Intent(context, ActivityWrapAll::class.java)
         }
     }

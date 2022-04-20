@@ -3,5 +3,7 @@
     <string name="chats">Chats</string>
     <string name="status">Status</string>
     <string name="calls">Calls</string>
-    <string name="wrap_selected_next_sample">Next Sample</string>
+    <string name="navigation_next_sample">To The Wrap All Attribute Demo</string>
+    <string name="demo_wrap_selected">WrapSelected Demo</string>
+    <string name="demo_wrap_all">Wrap All Demo</string>
 </resources>
