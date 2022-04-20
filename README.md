@@ -77,7 +77,7 @@ This widget attribute accepts a boolean which can either be declared in the widg
 
 ##### XML Layout: 
 
- ```app:wrapAllTabs="true```
+ ```app:wrapAllTabs="true"```
  
 Or alternatively use the following referencing a boolean in your view model:
 
