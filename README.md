@@ -14,7 +14,7 @@ similar designs to tab layouts seen within applications such as WhatsApp e.g.
 
 For detailed instructions please check out the official [Jitpack documentation](https://jitpack.io/#Josh-Owen/Wrap-Content-TabLayout/Tag).
 
-Additionally you can download the project from the Github's [release's page](https://github.com/Josh-Owen/Wrap-Content-TabLayout/releases)
+Additionally you can download the project from the Github's [release's page](https://github.com/Josh-Owen/Wrap-Content-TabLayout/releases).
 
 Or use Gradle:
 
@@ -46,7 +46,7 @@ Or Maven:
     <version>1.0.0</version>
 </dependency>
 ```
-### Library properties
+### Library Overview
 
 WrapContentTabLayout contains all of the functionality available in the native [TabLayout](https://developer.android.com/reference/com/google/android/material/tabs/TabLayout) widget
 with the addition of two additional properties:
@@ -83,15 +83,15 @@ Or alternatively use the following referencing a boolean in your view model:
 
  ```app:wrapAllTabs="@{vm.shouldTabsBeWrapped}```
 
+
+
 Note: There are code samples demonstrated both included within the project. 
-
-
 
 
 ### Working Code Template (Simply implement your array and replace with your image drawable)
 
 ```
-    <com.google.android.material.appbar.AppBarLayout
+<com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
