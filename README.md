@@ -81,7 +81,7 @@ This widget attribute accepts a boolean which can either be declared in the widg
  
 Or alternatively use the following referencing a boolean in your view model:
 
- ```app:wrapAllTabs="@{viewModel.shouldTabsBeWrapped}```
+ ```app:wrapAllTabs="@{viewModel.shouldTabsBeWrapped}"```
 
 
 
